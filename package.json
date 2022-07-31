@@ -1,0 +1,59 @@
+{
+  "name": "bookshelf",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --port 8080",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "start": "concurrently \"npm run serve\" \" cd backend/server && nodemon server.js\" "
+  },
+  "dependencies": {
+    "@mdi/font": "^7.0.96",
+    "@zxing/library": "^0.19.1",
+    "bcrypt": "^5.0.1",
+    "concurrently": "^7.2.2",
+    "core-js": "^3.8.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.4.1",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.16",
+    "wave-ui": "^2.40.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "dotenv": "^16.0.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "nodemon": "^2.0.18"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
