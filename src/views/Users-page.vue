@@ -27,11 +27,7 @@
       label="Search"
       v-model="searchInput"
     />
-    <div
-      v-show="searchInput.length > 0"
-      v-for="(user, index) in filteredUsers"
-      :key="index"
-    >
+    <div v-for="(user, index) in filteredUsers" :key="index">
       <h2 @click="getUsersBookshelf(user._id)">
         {{ user.username }}
       </h2>
