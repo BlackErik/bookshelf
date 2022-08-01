@@ -27,6 +27,8 @@ router.post("", async (req, res) => {
         description: req.body.description,
         isbn: req.body.isbn,
         user_id: [req.user.id],
+        user_rating: [],
+        average_user_rating: 0,
       });
     } else if (testBookInDatabase) {
       book = testBookInDatabase;

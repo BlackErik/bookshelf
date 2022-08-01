@@ -10,6 +10,12 @@ const bookSchema = new mongoose.Schema({
   rating: {
     type: Number,
   },
+  user_rating: {
+    type: [Number],
+  },
+  average_user_rating: {
+    type: Number,
+  },
   authors: {
     type: String,
   },
