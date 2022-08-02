@@ -25,4 +25,15 @@ router.get("/:isbn", async (req, res) => {
   res.status(200).json(book);
 });
 
+router.get("/random", async (req, res) => {
+  let books;
+  try {
+    books = await bookModel.find();
+  } catch (err) {
+    res.status(404).json({ message: "couldn't find random book" });
+    return;
+  }
+  res.status(200).json(books);
+});
+
 module.exports = router;
